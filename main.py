@@ -20,10 +20,6 @@ app.add_middleware(
 app.include_router(userRoutes.router)
 app.include_router(fileRoutes.router)
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
 @app.get("/sizedb")
 async def get_files():
     file_in_db = size_file_db()
